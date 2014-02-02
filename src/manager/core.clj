@@ -5,4 +5,4 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (yaml/parse-string (slurp "index.yaml"))))
+  (println (yaml/parse-string (slurp "content.yml"))))
