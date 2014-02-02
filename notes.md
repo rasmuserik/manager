@@ -1,0 +1,6 @@
+- responsibilities
+  - generate `nginx.conf`
+  - retrieve needed services from github, start them, and keep them running
+  - generate static-html/`public_html` for web root
+  - http-handle `/_` (logger), and `/content.json`
+- data, first from `content.yml`, and later change that to edn
