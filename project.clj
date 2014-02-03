@@ -2,6 +2,7 @@
   :description "utility for running services"
   :url "http://github.com/rasmuserik/manager"
   :dependencies [[org.clojure/clojure "1.5.1"]
+                 [org.clojure/data.json "0.2.4"]
                  [clj-yaml "0.4.0"]
                  ]
   :main ^:skip-aot manager.core
