@@ -100,11 +100,16 @@
         (fn [[key, val]]
           [:server [:server_name key
                     :rewrite (str "^ http://solsort.com" val " permanent")]])
-        url-redirect)
+        (cfg :url-redirect))
       [[ :server
-         [ :server_name "~^(?<domain>.*)$"
-           :root (str (cfg :root) "/www")
-           :TODO
+         [ [:server_name "~^(?<domain>.*)$"]
+           [:root (str (cfg :root) "/www")]
+           [ "location /"
+             ( concat
+               ( map
+                 (fn [[key val]] [:rewrite (str "^" key " " val " permanent")])
+                 (cfg :url-redirect))
+               { :proxy_pass (cfg :default-server)})]
           ]
        ]
        [ :server
@@ -117,8 +122,14 @@
               proxy_set_header X-Real-IP $remote_addr;
               proxy_pass http://127.0.0.1:80;}" }]])})
 
+(defn prettyPrintNginx [conf indentTODOdefaultVal]
+  :TODO)
 
-(nginxConf {:root "/home/server"})
+(nginxConf
+ {:root "/home/server"
+  :default-server "http://localhost:9999/"
+  :url-redirect url-redirect
+  :host-redirect host-redirect})
 
 (defn generate []
   (str
