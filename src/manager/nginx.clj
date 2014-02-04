@@ -89,7 +89,7 @@
         :keepalive_timeout "65"
         :types_hash_max_size "2048"
 
-        :include "/etc/nginx/mine.types"
+        :include "/etc/nginx/mime.types"
         :default_type "application/octet-stream"
 
         :error_log (str (cfg :root) "/log/error.log")
@@ -119,9 +119,9 @@
            :ssl_certificate (str (cfg :root) "ssl-keys/server.crt")
            :ssl_certificate_key (str (cfg :root) "ssl-keys/server.key")
            :server_name "ssl.solsort.com solsort.com localhost"
-           :location "/ {
-              proxy_set_header X-Real-IP $remote_addr;
-              proxy_pass http://127.0.0.1:80;}" }]])})
+           "location /" {
+              :proxy_set_header "X-Real-IP $remote_addr"
+              :proxy_pass "http://127.0.0.1:80"}}]])})
 
 (defn prettyPrintNginx
   ( [conf] (prettyPrintNginx conf 0))
@@ -136,9 +136,9 @@
             (if (or (seq? val) (map? val) (vector? val))
               (str
                "{\n" (prettyPrintNginx val (inc indent))
-               (apply str (take indent (repeat "  "))) "}")
-              val)
-            ";\n")) conf))))
+               (apply str (take indent (repeat "  "))) "}\n")
+              (str val ";\n"))
+            )) conf))))
 
 (prettyPrintNginx {:foo {:bar "blah"} :baz "quux"})
 (prettyPrintNginx [[:foo [[:bar "blah"]]] [:baz "quux"]])
