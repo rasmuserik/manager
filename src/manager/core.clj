@@ -4,6 +4,7 @@
   (:require
      [clj-yaml.core :as yaml]
      [manager.nginx :as nginx]
+     [manager.entries :as entries]
      [manager.logger :as logger]))
 
 (defn createNginxConf []
@@ -11,6 +12,7 @@
 (createNginxConf)
 
 (logger/log "hello" :world {:foo :bar :baz :quux})
+(prn entries/entries)
 
 (defn -main
   [& args]
