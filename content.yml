@@ -18,7 +18,6 @@ presentation:
       date: "2013-05-22"
       tags: "presentation, html5, cnug"
       link: "/slides/cnug2013-html5/"
-      source: "https://github.com/rasmuserik/app-speeding"
       desc: "Slides for presentation done at CNUG.dk"
       time: "3 days study/preparation for presentation, 1 hour presentation"
     jsengines:
@@ -82,6 +81,7 @@ apps:
       title: "Speeding visualisation"
       tags: "coffeescript, hammertime, visualisation"
       date: "2013-05-15"
+      link:  "http://speeding.solsort.com"
       desc: "Visualiseringskode for vejdirektoratet - layout baseret på tidligere udgave"
       time: "5 hours trying to optimise original outsourced code, then 10 hours reimplementing it"
       demo: ["http://www.vejdirektoratet.dk/da/trafik/planl%C3%A6g%20turen/voresfart/sider/default.aspx", "/vores-fart"]
@@ -92,6 +92,7 @@ apps:
       date: "2013-04-30"
       tags: "coffeescript, hammertime, visualisation, html5"
       desc: "Dragging animation special effect - as requested for the development of legoland billund resort web page."
+      link: http://dragimation.solsort.com
       demo: ["http://www.legolandbillundresort.com", "/dragimation"
       github: "app-dragimation"
       online: {"/dragimation": "app-dragimation/public"}
@@ -106,7 +107,7 @@ apps:
       link: "http://blobshot.solsort.com"
       desc: "Result of the 5apps hackathon."
       date: "2012-05-06"
-      demo: "/yolan/#blobshot"
+      demo: "http://old.solsort.com/#blobshot"
     tsartnoc: 
       name: "Tsar Tnoc"
       link: "/tsartnoc"
@@ -122,6 +123,8 @@ apps:
     "Hack4dk art quiz":
       date: 2013-09-28
       desc: "Hack4dk hackathon hack: art quiz"
+      github: hack4dk
+      link: /hack4dk/quiz
     notescore: 
       name: "NoteScore"
       desc: "Note learning app"
@@ -178,9 +181,13 @@ apps:
     "Hack4dk wikipedia graph visualisation":
       date: 2013-09-28
       desc: Hack4dk hackathon hack: graph visualisation from wikipedia
+      github: hack4dk
+      link: /hack4dk/d3wikipedia?Open+data
     "Hack4dk image recognition":
       date: 2013-09-28
       desc: Hack4dk hackathon hack: pure javascript destinction between differen kind of images. (utility code needed by another team)
+      github: hack4dk
+      link: /hack4dk/imextract
 writings:
   notes:  
     fototips:
@@ -206,8 +213,10 @@ writings:
       link: "/notes/presentation-evaluation"
       desc: "Checklist / notes for giving feedback on presentations. Useful for Toastmasters and similar."
       date: "2012-03-18"
-    rasmuserik-cv:
-      "todo"
+    rasmuserik:
+      name: Rasmus Erik
+      link: "/rasmuserik.html"
+      desc: Contact info, and more about the creator of these things
   computerscience:  
     structcomp:
       keywords: thesis bsc
