@@ -1,7 +1,7 @@
 presentation:
   slides-tech-talks:
     "BibTekKonf BibGraph":
-      title: Slides: BibTekKonf BibGraph
+      title: "Slides: BibTekKonf BibGraph"
       date: 2013-10-26
       tags: talk, presentation, bibtekkonf, bibgraph
       link: /slides/bibtekkonf2013-bibgraph
@@ -43,7 +43,7 @@ code:
   languages:
     lightscript:
       github: "lightscript"
-    yolan
+    yolan:
       github: "yolan"
     lightscript-old:
       github: lightscript-old
@@ -75,7 +75,7 @@ apps:
       link: "http://dbc-bibgraph.solsort.com/"
       desc: "Visualisation of relations between books and other library materials, generated from the ADHL statistics about danish co-loans"
       github: "DBCDK/bibgraph"
-      demo: "http://labs.dbc.dk/bibgraph"]
+      demo: "http://labs.dbc.dk/bibgraph"
     speeding:
       name: "Vores fart - visualisering"
       title: "Speeding visualisation"
@@ -92,8 +92,8 @@ apps:
       date: "2013-04-30"
       tags: "coffeescript, hammertime, visualisation, html5"
       desc: "Dragging animation special effect - as requested for the development of legoland billund resort web page."
-      link: http://dragimation.solsort.com
-      demo: ["http://www.legolandbillundresort.com", "/dragimation"
+      link: "http://dragimation.solsort.com"
+      demo: ["http://www.legolandbillundresort.com", "/dragimation"]
       github: "app-dragimation"
       online: {"/dragimation": "app-dragimation/public"}
   apps:
@@ -135,7 +135,7 @@ apps:
     vejviser-korrektur:
       demo: "http://kbh-vejviser.dk"
     vejviser-workflow: 
-      url: http://pocr.sourceforge.net/
+      url: "http://pocr.sourceforge.net/"
   protoapps:    
     cuteengine: 
       name: "CuteEngine"
@@ -180,12 +180,12 @@ apps:
       desc: ""
     "Hack4dk wikipedia graph visualisation":
       date: 2013-09-28
-      desc: Hack4dk hackathon hack: graph visualisation from wikipedia
+      desc: "Hack4dk hackathon hack: graph visualisation from wikipedia"
       github: hack4dk
       link: /hack4dk/d3wikipedia?Open+data
     "Hack4dk image recognition":
       date: 2013-09-28
-      desc: Hack4dk hackathon hack: pure javascript destinction between differen kind of images. (utility code needed by another team)
+      desc: "Hack4dk hackathon hack: pure javascript destinction between differen kind of images. (utility code needed by another team)"
       github: hack4dk
       link: /hack4dk/imextract
 writings:
@@ -295,6 +295,6 @@ meta:
       github: app-old
       online: {"/old": "app-old/public"}
   TODO:
-    indretning: "Duden skænk", "Node væg", "Wires", "Hjørnehylder"
+    indretning: ["Duden skænk", "Node væg", "Wires", "Hjørnehylder"]
     photos: by category
     billeder: tegninger
