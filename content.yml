@@ -132,7 +132,7 @@ apps:
     vejviser-korrektur:
       demo: "http://kbh-vejviser.dk"
     vejviser-workflow: 
-      "TODO"
+      url: http://pocr.sourceforge.net/
   protoapps:    
     cuteengine: 
       name: "CuteEngine"
