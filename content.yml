@@ -2,7 +2,7 @@ presentation:
   slides-tech-talks:
     "BibTekKonf BibGraph":
       title: "Slides: BibTekKonf BibGraph"
-      date: 2013-10-26
+      date: "2013-10-26"
       tags: talk, presentation, bibtekkonf, bibgraph
       link: /slides/bibtekkonf2013-bibgraph
       desc: Slides fra BibTekKonf præsentation om visualisering ud fra ADHL-data
@@ -21,13 +21,13 @@ presentation:
       desc: "Slides for presentation done at CNUG.dk"
       time: "3 days study/preparation for presentation, 1 hour presentation"
     jsengines:
-      "todo"
+      todo: todo
     berlincompiler-yolan:
-      "todo"
+      todo: todo
     osd-html5:
-      "todo"
+      todo: todo
     osd-javascript:
-      "todo"
+      todo: todo
   teaching:
     grundat:
       github: "rasmusjensen/grundat"
@@ -52,16 +52,16 @@ code:
       github: language-experiment
       link: thesis
     stack-languages:
-      todo - stack-lang from thesis, f1k
+      todo: todo - stack-lang from thesis, f1k
   oss-contrib:
     rhino-e4x:
-      "todo"
+      todo: todo
     firefox-e4x:
-      "todo"
+      todo: todo
     js-beautify:
-      "todo"
+      todo: todo
     meteor-litcoffee:
-      "todo"
+      todo: todo
 apps:
   widgets:
     onetwo360-client:
@@ -121,7 +121,7 @@ apps:
       desc: "Learning \"game\" for the geography of Denmark."
       date: "2011-08"
     "Hack4dk art quiz":
-      date: 2013-09-28
+      date: "2013-09-28"
       desc: "Hack4dk hackathon hack: art quiz"
       github: hack4dk
       link: /hack4dk/quiz
@@ -161,7 +161,7 @@ apps:
       desc: prototyping decision support for social workers
   demo:
     f1k-rain:
-      "todo"
+      todo: todo
     f1k-brownian:
       desc: fading random cloudsw generated through brownian noise in 127bytes
     f1k-sierp:
@@ -169,22 +169,22 @@ apps:
     fractal-4d: 
       desc: visualisation of 4d fractal
     yolan-editor:
-      probably remove due to security
+      todo: probably remove due to security
     treelayout:
       desc: Layout a tree datastructure as boxes - GUI-experiment
     hier-brows:
-      todo
+      todo: todo
     "Force based graph":
       desc: simple implementation of force-based graph layout
     "Diamond square plasma":
       desc: ""
     "Hack4dk wikipedia graph visualisation":
-      date: 2013-09-28
+      date: "2013-09-28"
       desc: "Hack4dk hackathon hack: graph visualisation from wikipedia"
       github: hack4dk
       link: /hack4dk/d3wikipedia?Open+data
     "Hack4dk image recognition":
-      date: 2013-09-28
+      date: "2013-09-28"
       desc: "Hack4dk hackathon hack: pure javascript destinction between differen kind of images. (utility code needed by another team)"
       github: hack4dk
       link: /hack4dk/imextract
@@ -238,49 +238,49 @@ physical:
       desc: "Card game version of combigame"
   print:
     "Design og evaluering af et introducerende datalogikursus":
-      todo
+      todo: todo
 music:
   scores:    
     ca-ra-ca-fu:
       music: 061227-ca-ra-ca-fu
-      date: 2006-12-27
+      date: "2006-12-27"
       keywords: digitisation 
       desc: Digitisation/typesetting of an out-of-copyright tango score
     music-070113: 
       music: "070113" 
-      date: 2007-01-13
+      date: "2007-01-13"
       keywords:  classical
     music-131023: 
       music: "131023" 
-      date: 2013-10-23
+      date: "2013-10-23"
       keywords:  classical
     tango-tema-del-ultimo-2006: 
       music: "061231-tango-tema" 
-      date: 2006-12-31
+      date: "2006-12-31"
       keywords:  tango
     untitled-nuevo-tema: 
       music: "061231-tango-nuevo-tema" 
-      date: 2006-12-31
+      date: "2006-12-31"
       keywords:  tango
     a-tango-unfinished: 
       music: "070113-tango" 
-      date: 2007-01-13
+      date: "2007-01-13"
       keywords:  tango
     mmm: 
       music: "131023" 
-      date: 2013-10-23
+      date: "2013-10-23"
       keywords:  sad
     elala:
       music: "070102-elala" 
-      date: 2007-01-02
+      date: "2007-01-02"
       keywords: classical chord-progression
     rosa: 
       music: "070101-rosa.midi" 
-      date: 2007-01-01
+      date: "2007-01-01"
       keywords: tango
     drommespejl: 
       music: "061231-song" 
-      date: 2006-12-31
+      date: "2006-12-31"
       keywords: sad
 meta:
   build:    
@@ -295,6 +295,9 @@ meta:
       github: app-old
       online: {"/old": "app-old/public"}
   TODO:
-    indretning: ["Duden skænk", "Node væg", "Wires", "Hjørnehylder"]
-    photos: by category
-    billeder: tegninger
+    indretning: 
+      todo: ["Duden skænk", "Node væg", "Wires", "Hjørnehylder"]
+    photos:
+      todo: by category
+    billeder: 
+      todo: tegninger
