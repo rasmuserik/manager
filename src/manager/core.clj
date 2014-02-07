@@ -13,6 +13,14 @@
 
 (logger/log "hello" :world {:foo :bar :baz :quux})
 
+(defn slurpyaml [name] (yaml/parse-string (slurp name)))
+(defn flattenContent [data] (apply concat (apply concat (for [[section val] data]
+  (for [[subsection val] val]
+    (for [[id obj] val]
+    (conj obj [:section section] [:subsection subsection] [:id id])))))))
+(defn sortChrono [data] (sort-by #(:date %) data))
+
+(comment
 (def data (yaml/parse-string (slurp "content.yml")))
 (def data (apply concat (apply concat (for [[section val] data]
   (for [[subsection val] val]
@@ -22,8 +30,9 @@
 data
 
 (pprint/pprint data)
+  )
 
 (defn -main
   [& args]
   (createNginxConf)
-  (println (yaml/parse-string (slurp "content.yml"))))
+  (pprint/pprint (sortChrono (flattenContent (slurpyaml "content.yml")))))
