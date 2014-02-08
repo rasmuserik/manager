@@ -1,12 +1,13 @@
 presentation:
   slides-tech-talks:
-    "BibTekKonf BibGraph":
+    bibtekkonf:
+      name: "BibTekKonf BibGraph"
       title: "Slides: BibTekKonf BibGraph"
       date: "2013-10-26"
       tags: talk, presentation, bibtekkonf, bibgraph
       link: /slides/bibtekkonf2013-bibgraph
       desc: Slides fra BibTekKonf præsentation om visualisering ud fra ADHL-data
-    "Summer Hacks": 
+    summer-hacks:
       name: "Summer Hacks"
       title: "Slides: Summer Hacks"
       date: "2013-08-14"
@@ -117,10 +118,10 @@ apps:
       name: "dkcities"
       title: "Danske Byer"
       link: "/danske-byer"
-      source: "https://github.com/rasmuserik/dkcities"
+      github: "dkcities"
       desc: "Learning \"game\" for the geography of Denmark."
       date: "2011-08"
-    "Hack4dk art quiz":
+    hack4dk-art-quiz:
       date: "2013-09-28"
       desc: "Hack4dk hackathon hack: art quiz"
       github: hack4dk
@@ -129,7 +130,7 @@ apps:
       name: "NoteScore"
       desc: "Note learning app"
       link: "/notescore"
-      google-play: "dk.solsort.notescore"
+      android: "dk.solsort.notescore"
       github: "notescore"
       date: "2011-08"
     vejviser-korrektur:
@@ -140,7 +141,7 @@ apps:
     cuteengine: 
       name: "CuteEngine"
       link: "/cute-engine"
-      Source: "https://github.com/rasmuserik/planetcute"
+      github: "planetcute"
       desc: "Game engine experiment"
       date: "2011-08"
       time: "3 days"
@@ -151,7 +152,7 @@ apps:
       date: "2013-07-08"
       tags: "coffeescript, hammertime, gis, leaflet, openstreetmap"
       link: "http://skolevej.solsort.com/"
-      source: "https://github.com/rasmuserik/app-skolevej"
+      github: "app-skolevej"
       desc: "Demo/frontend of editor for safe school routes - made for Hammertime / Odense Kommune"
     find-a-day:
       desc: meteor calendar-oriented doodle-like app
@@ -174,16 +175,16 @@ apps:
       desc: Layout a tree datastructure as boxes - GUI-experiment
     hier-brows:
       todo: todo
-    "Force based graph":
+    force-based-graph:
       desc: simple implementation of force-based graph layout
-    "Diamond square plasma":
+    diamond-square-plasma:
       desc: ""
-    "Hack4dk wikipedia graph visualisation":
+    hack4dk-wikipedia-graph-visualisation:
       date: "2013-09-28"
       desc: "Hack4dk hackathon hack: graph visualisation from wikipedia"
       github: hack4dk
       link: /hack4dk/d3wikipedia?Open+data
-    "Hack4dk image recognition":
+    hack4dk-image-recognition:
       date: "2013-09-28"
       desc: "Hack4dk hackathon hack: pure javascript destinction between differen kind of images. (utility code needed by another team)"
       github: hack4dk
@@ -219,13 +220,13 @@ writings:
       desc: Contact info, and more about the creator of these things
   computerscience:  
     structcomp:
-      keywords: thesis bsc
+      tags: thesis bsc
     moblang:
-      keywords: thesis msc
+      tags: thesis msc
     iva-paper:
-      keywords: article
+      tags: article
     tempo-paper:
-      keywords: article
+      tags: article
 physical:
   cardgames:
     eurocards: 
@@ -234,60 +235,60 @@ physical:
       link: "/notes/eurocards"
       desc: "top-trump like card game for learning facts about european countries"
       date: "2012-06-20"
-    combigame:
+    combigame-card:
       desc: "Card game version of combigame"
   print:
-    "Design og evaluering af et introducerende datalogikursus":
+    design-og-evaluering-af-et-introducerende-datalogikursus:
       todo: todo
 music:
   scores:    
     ca-ra-ca-fu:
       music: 061227-ca-ra-ca-fu
       date: "2006-12-27"
-      keywords: digitisation 
+      tags: digitisation 
       desc: Digitisation/typesetting of an out-of-copyright tango score
     music-070113: 
       music: "070113" 
       date: "2007-01-13"
-      keywords:  classical
+      tags:  classical
     music-131023: 
       music: "131023" 
       date: "2013-10-23"
-      keywords:  classical
+      tags:  classical
     tango-tema-del-ultimo-2006: 
       music: "061231-tango-tema" 
       date: "2006-12-31"
-      keywords:  tango
+      tags:  tango
     untitled-nuevo-tema: 
       music: "061231-tango-nuevo-tema" 
       date: "2006-12-31"
-      keywords:  tango
+      tags:  tango
     a-tango-unfinished: 
       music: "070113-tango" 
       date: "2007-01-13"
-      keywords:  tango
+      tags:  tango
     mmm: 
       music: "131023" 
       date: "2013-10-23"
-      keywords:  sad
+      tags:  sad
     elala:
       music: "070102-elala" 
       date: "2007-01-02"
-      keywords: classical chord-progression
+      tags: classical chord-progression
     rosa: 
       music: "070101-rosa.midi" 
       date: "2007-01-01"
-      keywords: tango
+      tags: tango
     drommespejl: 
       music: "061231-song" 
       date: "2006-12-31"
-      keywords: sad
+      tags: sad
 meta:
   build:    
     scores:
       github: music
       build: "lilypond *.ly"
-    yolan:
+    yolan-server:
       github: yolan
       server: install -d build; cp dep/* build/; ./yolan server
       online: {"yolan": ":1234"}
