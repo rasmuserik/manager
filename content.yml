@@ -193,27 +193,32 @@ writings:
   notes:  
     fototips:
       desc: notes for taking photos
+      github: writings
     productivity-hacks: 
       name: "Productivity Hacks"
       link: "/notes/productivity-hacks"
       desc: "Notes for a presentation on productivity hacks. Keywords of my aproaches to handle the world."
       date: "2013-04-30"
+      github: writings
     pricing-scale:
       name: "Pricing scale"
       link: "/notes/pricing-scale"
       desc: "Tool for pricing and estimating cost."
       date: "2013"
+      github: writings
     skrivetips: 
       name: "Skrivetips"
       lang: "da"
       link: "/notes/skrivetips"
       desc: "Tips / noter om skrivning, herunder også struktur for videnskabelige rapporter. Tips for effective writing (in Danish)."
       date: "2005"
+      github: writings
     presentation-evaluation: 
       name: "Presentation evaluation notes"
       link: "/notes/presentation-evaluation"
       desc: "Checklist / notes for giving feedback on presentations. Useful for Toastmasters and similar."
       date: "2012-03-18"
+      github: writings
     rasmuserik:
       name: Rasmus Erik
       link: "/rasmuserik.html"
@@ -235,6 +240,7 @@ physical:
       link: "/notes/eurocards"
       desc: "top-trump like card game for learning facts about european countries"
       date: "2012-06-20"
+      github: writings
     combigame-card:
       desc: "Card game version of combigame"
   print:
