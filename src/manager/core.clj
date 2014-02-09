@@ -5,6 +5,7 @@
    [clj-yaml.core :as yaml]
    [manager.nginx :as nginx]
    [hiccup.core :as hiccup]
+   [clojure.string]
    [clojure.pprint :as pprint]
    [manager.logger :as logger]))
 
@@ -56,12 +57,23 @@
 
 (defn gh-fetch [repos]
   "download/update repository from github"
-  (let [url (str "https://github.com/" repos ".git")
-        pb (ProcessBuilder. ["git" "clone" url])]
-    (prn (str "start" url))
-    (.waitFor (-> pb (.directory (java.io.File. "/home/server/repos")) (.start)))
-    (prn (str "done " url))
-    ))
+  (let [base "/home/server/repos"
+        name ((clojure.string/split repos #"/") 1)
+        reposDir (str base "/" name)
+        url (str "https://github.com/" repos ".git")]
+    (prn (str "start " name))
+    (-> (ProcessBuilder. ["git" "clone" url])
+        (.directory (java.io.File. base))
+        (.start)
+        (.waitFor))
+    (-> (ProcessBuilder. ["git" "pull"])
+        (.directory (java.io.File. reposDir))
+        (.start)
+        (.waitFor))
+    ;(.waitFor (-> pb (.directory (java.io.File. "/home/server/repos")) (.start)))
+    (prn (str "done " url))))
+(clojure.string/split "foo/bar" #"/")
+(gh-fetch "rasmuserik/manager")
 
 (pmap gh-fetch gh-repos)
 
