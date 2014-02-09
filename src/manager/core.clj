@@ -2,11 +2,11 @@
   "manages running processes and web server configuration"
   (:gen-class)
   (:require
-     [clj-yaml.core :as yaml]
-     [manager.nginx :as nginx]
-     [hiccup.core :as hiccup]
-     [clojure.pprint :as pprint]
-     [manager.logger :as logger]))
+   [clj-yaml.core :as yaml]
+   [manager.nginx :as nginx]
+   [hiccup.core :as hiccup]
+   [clojure.pprint :as pprint]
+   [manager.logger :as logger]))
 
 (defn createNginxConf []
   (spit "/home/server/nginx.conf" (nginx/generate)))
@@ -16,9 +16,9 @@
 
 (defn slurpyaml [name] (yaml/parse-string (slurp name)))
 (defn flattenContent [data] (apply concat (apply concat (for [[section val] data]
-  (for [[subsection val] val]
-    (for [[id obj] val]
-    (conj obj [:section section] [:subsection subsection] [:id id])))))))
+                                                          (for [[subsection val] val]
+                                                            (for [[id obj] val]
+                                                              (conj obj [:section section] [:subsection subsection] [:id id])))))))
 (defn sortChrono [data] (sort-by #(:date %) data))
 
 (defn duplicateIds [data]
@@ -32,21 +32,40 @@
           (recur (conj ids id) dups elems)))
       dups)))
 
-(def data (sortChrono (flattenContent (slurpyaml "content.yml"))))
+(def data (reverse (sortChrono (flattenContent (slurpyaml "content.yml")))))
 
 (let [duplicates (duplicateIds data)]
   (if duplicates
     (prn "duplicates:" duplicates)))
 
 (count data)
-(def data (filter #(% :date) (reverse data)))
+;(def data (filter #(% :date) (reverse data)))
 (count data)
 (map #(% :id) data)
 
-(defn obj2html [obj]
+(keys (reduce into data))
 
-  )
-(hiccup.core/html [:span "hello"])
+(def
+  gh-repos
+  ( into
+    #{}
+    ( ->> data
+      (map #(% :github))
+      (filter identity)
+      (map #(if (= -1 (.indexOf % "/")) (str "rasmuserik/" %) %)))))
+
+(defn gh-fetch [repos]
+  "download/update repository from github"
+  (let [url (str "https://github.com/" repos ".git")
+        pb (ProcessBuilder. ["git" "clone" url])]
+    (prn (str "start" url))
+    (.waitFor (-> pb (.directory (java.io.File. "/home/server/repos")) (.start)))
+    (prn (str "done " url))
+    ))
+
+(pmap gh-fetch gh-repos)
+
+(hiccup/html [:span "hello"])
 
 (defn -main
   [& args]

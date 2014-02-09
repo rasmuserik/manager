@@ -110,14 +110,16 @@
                ( map
                  (fn [[key val]] [:rewrite (str "^" key "$ " val " permanent")])
                  (cfg :url-redirect))
-               { :proxy_pass (cfg :default-server)})]
+               {:try_files "$uri $uri.html $uri/index.html index.html"}
+              ; { :proxy_pass (cfg :default-server)}
+               )]
           ]
        ]
        [ :server
          { :listen "443"
            :ssl "on"
-           :ssl_certificate (str (cfg :root) "ssl-keys/server.crt")
-           :ssl_certificate_key (str (cfg :root) "ssl-keys/server.key")
+           :ssl_certificate (str (cfg :root) "/ssl-keys/server.crt")
+           :ssl_certificate_key (str (cfg :root) "/ssl-keys/server.key")
            :server_name "ssl.solsort.com solsort.com localhost"
            "location /" {
               :proxy_set_header "X-Real-IP $remote_addr"
