@@ -99,7 +99,7 @@
         :access_log (str (cfg :root) "/log/access.log")
 
         :gzip "on"
-        :gzip_disable "\"msie6\""}
+        :gzip_disable "\"msie7\""}
       (map
         (fn [[key, val]]
           [:server {:server_name key
@@ -160,4 +160,8 @@
       :default-server "http://localhost:9999/"
       :url-redirect url-redirect
       :host-redirect host-redirect})))
+
+
+; experiments
+
 (generate (content/load "content.yml"))

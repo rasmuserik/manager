@@ -16,7 +16,7 @@
 ;(logger/log "hello" :world {:foo :bar :baz :quux})
 (defn -main
   [& args]
-  (let [data (content/load "content.yml")
+  (let [data (content/load-content "content.yml")
         duplicates (content/duplicateIds data)
         repos (seq (gh/repos data))]
     ;(prn (pmap gh/fetch repos))
