@@ -1,4 +1,7 @@
-(ns manager.nginx )
+(ns manager.nginx
+  (:require
+   [manager.content :as content]
+))
 
 (def host-redirect
   { "bibdata.dk" "/notes/biblioteksting"
@@ -151,10 +154,10 @@
   :url-redirect url-redirect
   :host-redirect host-redirect})))
 
-(defn generate []
+(defn generate [data]
   ( prettyPrintNginx (nginxConf
     { :root "/home/server"
       :default-server "http://localhost:9999/"
       :url-redirect url-redirect
       :host-redirect host-redirect})))
-(generate)
+(generate (content/load "content.yml"))

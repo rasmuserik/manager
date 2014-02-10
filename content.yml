@@ -78,6 +78,8 @@ apps:
       github: "DBCDK/bibgraph"
       demo: "http://labs.dbc.dk/bibgraph"
     speeding:
+      state: production
+      role: optimisation / reimplementation to solve performance issue
       name: "Vores fart - visualisering"
       title: "Speeding visualisation"
       tags: "coffeescript, hammertime, visualisation"
